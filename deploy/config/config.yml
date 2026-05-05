@@ -1,0 +1,142 @@
+# D&J Studio / Dujiao-Next 配置文件
+
+app:
+  secret_key: 30da7971e431b01cd0dd08d33c18e8280a723162c372e82bbe73c5a367ab5b1c
+  totp_issuer: Dujiao-Next
+
+server:
+  host: 0.0.0.0
+  port: 8080
+  mode: release
+
+log:
+  dir: /app/logs
+  filename: app.log
+  max_size_mb: 100
+  max_backups: 7
+  max_age_days: 30
+  compress: true
+
+database:
+  driver: sqlite
+  dsn: /app/db/dujiao.db
+  pool:
+    max_open_conns: 1
+    max_idle_conns: 1
+    conn_max_lifetime_seconds: 0
+    conn_max_idle_time_seconds: 0
+
+jwt:
+  secret: 46cfca6a0015d0ef82c06244f28a7b8722c4e3a91152e5b5aaf8c299c3712bcc
+  expire_hours: 24
+
+user_jwt:
+  secret: 88863f048a177cb33a149b9fdf60945b08c3a999e79b9c6dfc33d13f6798b66c
+  expire_hours: 24
+  remember_me_expire_hours: 168
+
+bootstrap:
+  default_admin_username: ""
+  default_admin_password: ""
+
+telegram_auth:
+  enabled: false
+  bot_username: ""
+  bot_token: ""
+  mini_app_url: ""
+  login_expire_seconds: 300
+  replay_ttl_seconds: 300
+
+redis:
+  enabled: true
+  host: redis
+  port: 6379
+  password: "ab37483af87b55b1d737fc0190d8987c997d863bd63cd2e8"
+  db: 0
+  prefix: "dj"
+
+queue:
+  enabled: true
+  host: redis
+  port: 6379
+  password: "ab37483af87b55b1d737fc0190d8987c997d863bd63cd2e8"
+  db: 1
+  concurrency: 10
+  queues:
+    default: 10
+    critical: 5
+  upstream_sync_interval: "5m"
+
+upload:
+  max_size: 10485760
+  allowed_types:
+    - image/jpeg
+    - image/png
+    - image/gif
+    - image/webp
+    - image/svg+xml
+  allowed_extensions:
+    - .jpg
+    - .jpeg
+    - .png
+    - .gif
+    - .webp
+    - .svg
+  max_width: 4096
+  max_height: 4096
+
+cors:
+  allowed_origins:
+    - "*"
+  allowed_methods:
+    - GET
+    - POST
+    - PUT
+    - PATCH
+    - DELETE
+    - OPTIONS
+  allowed_headers:
+    - Content-Type
+    - Content-Length
+    - Accept-Encoding
+    - Authorization
+    - Cache-Control
+    - X-Requested-With
+    - X-CSRF-Token
+  allow_credentials: true
+  max_age: 600
+
+security:
+  login_rate_limit:
+    window_seconds: 300
+    max_attempts: 5
+    block_seconds: 900
+  password_policy:
+    min_length: 8
+    require_upper: true
+    require_lower: true
+    require_number: true
+    require_special: false
+
+email:
+  enabled: true
+  host: smtp.xxx.com
+  port: 465
+  username: your-username
+  password: your-password
+  from: your-email
+  from_name: your-name
+  use_tls: false
+  use_ssl: true
+  verify_code:
+    expire_minutes: 10
+    send_interval_seconds: 60
+    max_attempts: 5
+    length: 6
+
+order:
+  payment_expire_minutes: 15
+  max_refund_days: 30
+
+web:
+  admin_path: "/admin"
