@@ -1,0 +1,12 @@
+[submodule "admin"]
+	path = admin
+	url = https://github.com/dujiao-next/admin.git
+[submodule "api"]
+	path = api
+	url = https://github.com/dujiao-next/dujiao-next.git
+[submodule "community-projects"]
+	path = community-projects
+	url = https://github.com/dujiao-next/community-projects.git
+[submodule "document"]
+	path = document
+	url = https://github.com/dujiao-next/document.git
