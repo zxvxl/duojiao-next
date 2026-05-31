@@ -74,7 +74,7 @@
           </div>
         </div>
         <div class="text-[11px] text-gray-400 text-right">
-          <span>{{ t('products.stockLabel') }}: {{ stockDisplay }}</span>
+          <span>{{ stockDisplay }}</span>
         </div>
       </div>
     </div>

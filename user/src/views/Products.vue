@@ -1,8 +1,8 @@
 <template>
-  <div class="products-page min-h-screen theme-page pt-20 pb-16">
+  <div class="products-page min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 pt-20 pb-16">
     <div class="container mx-auto px-4">
       <!-- Page Header -->
-      <div class="theme-page-shell mb-8 mt-8">
+      <div class="bg-white border border-gray-200/60 rounded-2xl p-5 shadow-sm mb-8 mt-8">
         <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <p class="theme-kicker mb-1.5">{{ t('products.allCategories') }}</p>
@@ -42,7 +42,7 @@
           <!-- Loading Skeleton -->
           <div v-if="loading" class="grid grid-cols-2 gap-3 md:gap-5 md:grid-cols-3 lg:grid-cols-4">
             <div v-for="i in 6" :key="i"
-              class="theme-panel rounded-2xl border overflow-hidden flex flex-col">
+              class="bg-white border border-gray-200/60 rounded-2xl overflow-hidden flex flex-col shadow-sm">
               <div class="h-36 md:h-56 theme-skeleton"></div>
               <div class="p-3 md:p-5 space-y-3">
                 <div class="h-3 w-16 rounded theme-skeleton"></div>

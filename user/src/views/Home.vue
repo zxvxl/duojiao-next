@@ -51,7 +51,7 @@
           {{ t('home.featured.title') }}
         </h2>
         <span class="text-xs text-gray-400 bg-gray-100 px-3 py-1.5 rounded-lg">
-          {{ t('products.total', { count: products.length }) }}
+          {{ products.length }} {{ t('products.categories') }}
         </span>
       </div>
 
