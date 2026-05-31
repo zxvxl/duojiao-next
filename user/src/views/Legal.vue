@@ -10,7 +10,7 @@
       </div>
 
       <div v-else
-        class="theme-panel-soft backdrop-blur-xl border rounded-3xl p-8 md:p-12 shadow-2xl">
+        class="bg-white border border-gray-200/60 rounded-2xl p-8 md:p-12 shadow-sm">
         <h1
           class="theme-page-title mb-8 border-b theme-border pb-5">
           {{ title }}
