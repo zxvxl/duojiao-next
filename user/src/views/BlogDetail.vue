@@ -1,6 +1,6 @@
 <template>
   <div
-    class="blog-detail-page min-h-screen theme-page pt-24 pb-16 relative overflow-hidden">
+    class="blog-detail-page min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 pt-20 pb-16 relative overflow-hidden">
     <div class="container mx-auto px-4 max-w-4xl relative z-10">
       <!-- Loading State -->
       <div v-if="loading" class="animate-pulse space-y-8">
@@ -26,7 +26,7 @@
         </nav>
 
         <div
-          class="theme-panel backdrop-blur-xl border rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+          class="bg-white border border-gray-200/60 rounded-2xl p-8 md:p-12 shadow-sm relative overflow-hidden">
           <!-- Featured Image -->
           <div v-if="post.thumbnail" class="mb-12 relative h-64 md:h-96 rounded-2xl overflow-hidden group">
             <img :src="getImageUrl(post.thumbnail)" :alt="getLocalizedText(post.title)"

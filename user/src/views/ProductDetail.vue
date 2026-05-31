@@ -5,7 +5,7 @@
       <!-- Loading Skeleton -->
       <div v-if="loading" class="space-y-8">
         <div class="h-5 w-48 rounded theme-skeleton"></div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 theme-panel border rounded-3xl overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white border border-gray-200/60 rounded-2xl overflow-hidden shadow-sm">
           <div class="p-4 md:p-8 theme-surface-soft border-r theme-border">
             <div class="h-[300px] md:h-[500px] rounded-xl theme-skeleton"></div>
             <div class="mt-4 flex gap-3 overflow-hidden">
