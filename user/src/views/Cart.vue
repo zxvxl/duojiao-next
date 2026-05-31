@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen theme-page pt-24 pb-16">
+  <div class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 pt-20 pb-16">
     <div class="container mx-auto px-4">
       <div class="mb-8">
         <h1 class="theme-page-title mb-2">{{ t('cart.title') }}</h1>
@@ -22,7 +22,7 @@
           <article
             v-for="item in cartItems"
             :key="cartItemKey(item)"
-            class="rounded-2xl border theme-panel p-4 md:p-5"
+            class="rounded-2xl border border-gray-200/60 bg-white p-4 md:p-5 shadow-sm"
           >
             <div class="flex gap-4 md:gap-5">
               <div
@@ -118,7 +118,7 @@
           </article>
         </div>
 
-        <div class="h-fit rounded-2xl border theme-panel p-6 lg:sticky lg:top-24">
+        <div class="h-fit rounded-2xl border border-gray-200/60 bg-white p-6 shadow-sm lg:sticky lg:top-20">
           <h2 class="mb-4 text-lg font-bold theme-text-primary">{{ t('cart.summaryTitle') }}</h2>
           <div class="space-y-3 text-sm theme-text-muted">
             <div class="flex items-center justify-between">

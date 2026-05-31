@@ -39,7 +39,7 @@
       <div v-else-if="posts.length > 0">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <article v-for="post in posts" :key="post.id"
-            class="group theme-panel backdrop-blur-xl border rounded-2xl overflow-hidden hover:bg-gray-50 dark:hover:bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl cursor-pointer flex flex-col"
+            class="group bg-white border border-gray-200/60 rounded-2xl overflow-hidden hover:bg-gray-50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-pointer flex flex-col"
             @click="goToPost(post.slug)">
             <!-- Thumbnail -->
             <div v-if="post.thumbnail" class="h-48 overflow-hidden relative">
@@ -111,7 +111,7 @@
 
       <!-- Empty State -->
       <div v-else
-        class="text-center py-20 border theme-border rounded-2xl theme-panel backdrop-blur-sm">
+        class="text-center py-20 border border-gray-200/60 rounded-2xl bg-white shadow-sm">
         <svg class="w-20 h-20 mx-auto theme-text-muted mb-6" fill="none" stroke="currentColor"
           viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"

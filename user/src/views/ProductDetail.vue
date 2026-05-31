@@ -1,11 +1,11 @@
 <template>
   <div
-    class="product-detail-page min-h-screen theme-page pt-24 pb-16">
+    class="product-detail-page min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 pt-20 pb-16">
     <div class="container mx-auto px-4">
       <!-- Loading Skeleton -->
       <div v-if="loading" class="space-y-8">
         <div class="h-5 w-48 rounded theme-skeleton"></div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 theme-panel border rounded-3xl overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white border border-gray-200/60 rounded-2xl overflow-hidden shadow-sm">
           <div class="p-4 md:p-8 theme-surface-soft border-r theme-border">
             <div class="h-[300px] md:h-[500px] rounded-xl theme-skeleton"></div>
             <div class="mt-4 flex gap-3 overflow-hidden">
@@ -44,7 +44,7 @@
 
         <!-- Main Info Card -->
         <div
-          class="theme-panel backdrop-blur-xl border rounded-3xl overflow-hidden mb-8 shadow-2xl">
+          class="bg-white border border-gray-200/60 rounded-2xl overflow-hidden mb-8 shadow-sm">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
             <!-- Product Images (Left) -->
             <ProductImageGallery
@@ -316,7 +316,7 @@
 
         <!-- Details Content Card -->
         <div v-if="product.content"
-          class="theme-panel backdrop-blur-xl border rounded-3xl overflow-hidden mb-12 p-6 md:p-8 lg:p-12 relative">
+          class="bg-white border border-gray-200/60 rounded-2xl overflow-hidden mb-12 p-6 md:p-8 lg:p-12 relative shadow-sm">
           <h2
             class="theme-content-title mb-6 flex items-center gap-3 border-b theme-border pb-5">
             <span class="w-1.5 h-8 theme-accent-stick rounded-full"></span>
@@ -329,7 +329,7 @@
 
         <!-- Related Posts -->
         <section v-if="relatedPosts.length"
-          class="theme-panel backdrop-blur-xl border rounded-3xl overflow-hidden mb-12 p-6 md:p-8 lg:p-12 relative">
+          class="bg-white border border-gray-200/60 rounded-2xl overflow-hidden mb-12 p-6 md:p-8 lg:p-12 relative shadow-sm">
           <h2 class="theme-content-title mb-6 flex items-center gap-3 border-b theme-border pb-5">
             <span class="w-1.5 h-8 theme-accent-stick rounded-full"></span>
             {{ t('productDetail.relatedPosts') }}

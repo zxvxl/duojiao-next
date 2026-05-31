@@ -1,7 +1,7 @@
 <template>
-  <div class="relative min-h-screen overflow-hidden theme-page pt-24 pb-16">
+  <div class="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-50 pt-20 pb-16">
     <div class="container relative z-10 mx-auto px-4">
-      <header class="theme-page-shell mb-8 lg:p-8">
+      <header class="bg-white border border-gray-200/60 rounded-2xl p-5 shadow-sm mb-8 lg:p-8">
         <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p class="theme-kicker">
